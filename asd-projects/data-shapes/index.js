@@ -37,7 +37,7 @@ $(document).ready(function () {
   // TODO 1: create a new shape object and add it to the array
 
 // TODO 0 complete
-let shape = {
+ let shape = {
   color: "blue",
   shape: "circle",
   repeat: 3
@@ -46,14 +46,14 @@ let shape = {
 dataShapes.push(shape);
   // TODO 2: add a new property to all data shapes
   for (let i = 0; i < dataShapes.length; i++) {
-  let s = dataShapes[i];
+  let shape = dataShapes[i];
 
-  if (s.color === "red") {
-    s.goodBehavior = "bounce";
-  } else if (s.color === "blue") {
-    s.goodBehavior = "blink";
+  if (shape.color === "red") {
+    shape.goodBehavior = "bounce";
+  } else if (shape.color === "blue") {
+    shape.goodBehavior = "blink";
   } else {
-    s.goodBehavior = "spin";
+    shape.goodBehavior = "spin";
   }
 }
 
@@ -82,18 +82,18 @@ dataShapes.push(shape);
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
    handleStatic(dataShapes[currentIndex]);
-
+  }
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
-    let s = dataShapes[currentIndex];
-handleGood(s.color, s.shape, s.repeat);
-
+     shape = dataShapes[currentIndex];
+handleGood(shape.color, shape.shape, shape.repeat);
+  }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
-   let s = dataShapes[currentIndex];
-handleBad(s, s.repeat);
-
+    shape = dataShapes[currentIndex];
+handleBad(shape, shape.repeat);
+  }
 
   /////////////////////////////////////////////////
   // ALL OF YOUR CODE SHOULD GO ABOVE HERE ////////
